@@ -11,18 +11,12 @@ document.getElementById('stockForm').addEventListener('submit', async function (
   stockDataDiv.innerHTML = '<p>Loading...</p>';
 
   try {
-    //console.log(`symbol : ${symbol}`)
-
     let response = await fetch(`${BASE_URL}function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${API_KEY}`, { 
         method: "GET"
       });
       
       const data = await response.json();
-    //console.log(data);
 
-    //const response = await fetch(`${BASE_URL}function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${API_KEY}`);
-    //const data = await response.json();
-      //console.log(data['Time Series (Daily)'])
     if (data['Time Series (Daily)']) {
       const timeSeries = data['Time Series (Daily)'];
       const labels = Object.keys(timeSeries).slice(0, 10).reverse();
