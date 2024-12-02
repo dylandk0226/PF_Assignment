@@ -8,17 +8,52 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <header class="header">
     <h1>Market Master</h1>
-    <form id="stockForm">
-      <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g., AAPL)" required>
-      <button type="submit">Get Stock Data</button>
+    <p>Your Stock Insights Hub</p>
+  </header>
+  <div class="container">
+
+    <form id="stockForm" class="form">
+      <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g., AAPL)" required aria-label="Stock Symbol" title="Enter a valid stock symbol">
+  <br>
+  <br>
+      <button type="submit" class="btn btn-primary">Get Stock Data</button>
     </form>
-    <div id="stockData"></div>
-    <canvas id="stockChart"></canvas>
+
+
+    <div id="tabs" class="tabs">
+      <div class="tab active" data-tab="details" tabindex="0">Details</div>
+      <div class="tab" data-tab="chart" tabindex="0">Chart</div>
+      <div class="tab" data-tab="news" tabindex="0">Latest News</div>
+    </div>
+  
+
+    <div id="content">
+
+      <div id="details" class="content-section active">
+        <div id="companyDetails" class="card-section">
+          <p>Enter a stock symbol to see company details, key ratios, charts and the latest news.</p>
+        </div>
+      </div>
+
+      <div id="chart" class="content-section">
+        <canvas id="stockChart"></canvas>
+        <div id="stockData" class="chart-data"></div>
+      </div>
+
+      <div id="news" class="content-section">
+        <div id="latestNews" class="card-section">
+          <p>Enter a stock symbol to fetch the latest news.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
+  <footer>
+    <p>&copy; 2024 Market Master. All rights reserved.</p>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+</body>
 </html>
