@@ -15,7 +15,7 @@
   <div class="container">
 
     <form id="stockForm" class="form">
-      <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g., AAPL)" required aria-label="Stock Symbol" title="Enter a valid stock symbol">
+      <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g. AAPL)" required aria-label="Stock Symbol" title="Enter a valid stock symbol">
   <br>
   <br>
       <button type="submit" class="btn btn-primary">Get Stock Data</button>
@@ -40,6 +40,10 @@
       <div id="chart" class="content-section">
         <canvas id="stockChart"></canvas>
         <div id="stockData" class="chart-data"></div>
+        <h3>Yearly Financial Performance</h3>
+        <canvas id="financialChart"></canvas>
+        <h3>Gross Profit (Annual)</h3>
+        <canvas id="grossProfitChart"></canvas>
       </div>
 
       <div id="news" class="content-section">
