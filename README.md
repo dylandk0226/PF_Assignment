@@ -77,6 +77,8 @@ Market Master was designed with accessibility and simplicity in mind. The primar
 ### Content:
 - Financial data sourced from [Alpha Vantage](https://www.alphavantage.co/) and [Financial Modeling Prep](https://financialmodelingprep.com/).
 - News articles powered by [MarketAux](https://marketaux.com/).
+- [Github](https://dylandk0226.github.io/PF_Assignment/)
+- [Render](https://master-market-106z.onrender.com/)
 
 ### Acknowledgements:
 - Special thanks to the [Chart.js](https://www.chartjs.org/) and [Bootstrap](https://getbootstrap.com/) communities for their comprehensive documentation and examples.
